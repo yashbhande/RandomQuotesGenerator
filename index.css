@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background: #bbc6fa;
+}
+
+.quote-box{
+    background: #fff;
+    width: 80%px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.quote-box h2 {
+    font-size: 28px; /* Adjust font size for smaller screens */
+    margin-bottom: 20px; /* Reduce margin for smaller screens */
+    position: relative;
+}
+
+.quote-box h2::after {
+    content: '';
+    width: 50px; /* Adjust width for smaller screens */
+    height: 3px;
+    border-radius: 3px;
+    background: rgba(23, 124, 229);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.quote-box blockquote {
+    font-size: 24px; /* Adjust font size for smaller screens */
+    min-height: 90px; /* Adjust height for smaller screens */
+}
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
+    content: '"';
+}
+
+.quote-box span {
+    display: block;
+    margin-top: 10px;
+    position: relative;
+}
+
+.quote-box span::before {
+    /* content: ''; */
+    width: 15px; /* Adjust width for smaller screens */
+    height: 2px;
+    background: rgba(23, 124, 229);
+    position: absolute;
+    top: 50%;
+    left: -20px; /* Adjust left position for smaller screens */
+}
+
+.quote-box div {
+    width: 100%;
+    margin-top: 30px; /* Adjust margin for smaller screens */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+}
+
+.quote-box button {
+    background: rgba(23, 124, 229);
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid rgba(23, 124, 229);
+    width: 100%; /* Take full width on smaller screens */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0; /* Adjust vertical margin for smaller screens */
+    cursor: pointer;
+    font-size: 15px;
+}
